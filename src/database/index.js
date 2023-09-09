@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const envDataUrl = require("../config/enviroment.json")
 
-mongoose.connect("mongodb+srv://dan:027539761@cluster0.7ebcgfv.mongodb.net/apimongo?retryWrites=true&w=majority")
+mongoose.connect(envDataUrl.DATABASE_URL)
   .then(() => {
     console.log("Conectado ao banco com sucesso!!");
   })
