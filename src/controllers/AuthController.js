@@ -50,7 +50,7 @@ router.post("/signin", async(req, res) => {
     }
         user.password = undefined;
         
-        return res.json({
+        return res.status(200).json({
             token: generateToken(user)
         });
 });
